@@ -1,0 +1,1964 @@
+{
+  "profile_title": "V I A R • VPN",
+  "profile_update_interval": 1,
+  "channel": "@viarvpn",
+  "bot": "@viarvpn_bot",
+  "last_updated": "2026-06-03T12:09:41.599733",
+  "total_servers": 20,
+  "servers": [
+    {
+      "name": "🇩🇪 Германия | 1",
+      "country": "Германия",
+      "number": 1,
+      "source": "main_parser",
+      "config": {
+        "remarks": "🇩🇪 Германия | 1",
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "85.208.139.206",
+                  "port": 52673,
+                  "users": [
+                    {
+                      "id": "1694d22e-33ef-4b7d-a09b-756fcb553fa5",
+                      "encryption": "none",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "none"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "🇩🇪 Германия | 2",
+      "country": "Германия",
+      "number": 2,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "ger05s.helpbot.click",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "tcpSettings": {},
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "ger05s.helpbot.click",
+                "show": false,
+                "publicKey": "M1a5zeQ6Ckoo1UybbRYD8696xaWb-fRcCY-7iaQ4wCA",
+                "shortId": "fd3f0f2bce8083fe"
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "🇩🇪 Германия | 2"
+      }
+    },
+    {
+      "name": "🇩🇪 Германия | 3",
+      "country": "Германия",
+      "number": 3,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "ger02.helpbot.click",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "tcpSettings": {},
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "ger02.helpbot.click",
+                "show": false,
+                "publicKey": "M1a5zeQ6Ckoo1UybbRYD8696xaWb-fRcCY-7iaQ4wCA",
+                "shortId": "8618f58c6a3f6eb7"
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "🇩🇪 Германия | 3"
+      }
+    },
+    {
+      "name": "🇳🇱 Нидерланды | 1",
+      "country": "Нидерланды",
+      "number": 1,
+      "source": "main_parser",
+      "config": {
+        "remarks": "🇳🇱 Нидерланды | 1",
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "147.45.50.53",
+                  "port": 33963,
+                  "users": [
+                    {
+                      "id": "e206d352-eb95-4702-8c9e-4bffc0585ac9",
+                      "encryption": "none",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "none"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "🇳🇱 Нидерланды | 2",
+      "country": "Нидерланды",
+      "number": 2,
+      "source": "main_parser",
+      "config": {
+        "remarks": "🇳🇱 Нидерланды | 2",
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "144.124.238.172",
+                  "port": 39054,
+                  "users": [
+                    {
+                      "id": "d9b6b1e2-ba5f-4880-ae32-4fcccd8211f1",
+                      "encryption": "none",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "none"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "🇳🇱 Нидерланды | 3",
+      "country": "Нидерланды",
+      "number": 3,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "nld02.helpbot.click",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "tcpSettings": {},
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "nld02.helpbot.click",
+                "show": false,
+                "publicKey": "M1a5zeQ6Ckoo1UybbRYD8696xaWb-fRcCY-7iaQ4wCA",
+                "shortId": "fd3f0f2bce8083fe"
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "🇳🇱 Нидерланды | 3"
+      }
+    },
+    {
+      "name": "🇳🇱 Нидерланды | 4",
+      "country": "Нидерланды",
+      "number": 4,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "nld03.helpbot.click",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "tcpSettings": {},
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "nld03.helpbot.click",
+                "show": false,
+                "publicKey": "7pj622dmlZjrim7ZP861rNrSuYWUH71roySXX71YZm0",
+                "shortId": "5c99902ea994ce08"
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "🇳🇱 Нидерланды | 4"
+      }
+    },
+    {
+      "name": "🇵🇱 Польша | 1",
+      "country": "Польша",
+      "number": 1,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "pollux.helpbot.click",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "tcpSettings": {},
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "pollux.helpbot.click",
+                "show": false,
+                "publicKey": "M1a5zeQ6Ckoo1UybbRYD8696xaWb-fRcCY-7iaQ4wCA",
+                "shortId": "7d47a650c7162ddb"
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "🇵🇱 Польша | 1"
+      }
+    },
+    {
+      "name": "🇵🇱 Польша | 2",
+      "country": "Польша",
+      "number": 2,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "pollux02.helpbot.click",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "tcpSettings": {},
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "pollux02.helpbot.click",
+                "show": false,
+                "publicKey": "M1a5zeQ6Ckoo1UybbRYD8696xaWb-fRcCY-7iaQ4wCA",
+                "shortId": "7e2943dccaad823d"
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "🇵🇱 Польша | 2"
+      }
+    },
+    {
+      "name": "🇵🇱 Польша | 3",
+      "country": "Польша",
+      "number": 3,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "pol01.helpbot.click",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "tcpSettings": {},
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "eh.vk.com",
+                "show": false,
+                "publicKey": "M1a5zeQ6Ckoo1UybbRYD8696xaWb-fRcCY-7iaQ4wCA"
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "🇵🇱 Польша | 3"
+      }
+    },
+    {
+      "name": "🇵🇱 Польша | 4",
+      "country": "Польша",
+      "number": 4,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "pol.mkeycon.com",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "tcpSettings": {},
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "pol.mkeycon.com",
+                "show": false,
+                "publicKey": "eyaIwlWAGwfE6JE-LrW5HDc-gqIMNTx7d1bQzz4_Q10",
+                "shortId": "edf8b615d73d86a0"
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "🇵🇱 Польша | 4"
+      }
+    },
+    {
+      "name": "🇵🇱 Польша | 5",
+      "country": "Польша",
+      "number": 5,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "pol01.helpbot.click",
+                  "port": 8443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "xhttp",
+              "xhttpSettings": {
+                "mode": "auto",
+                "host": "",
+                "path": "/"
+              },
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "eh.vk.com",
+                "show": false,
+                "publicKey": "M1a5zeQ6Ckoo1UybbRYD8696xaWb-fRcCY-7iaQ4wCA"
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "🇵🇱 Польша | 5"
+      }
+    },
+    {
+      "name": "🇵🇱 Польша | 6",
+      "country": "Польша",
+      "number": 6,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "pol01.helpbot.click",
+                  "port": 2053,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "grpc",
+              "grpcSettings": {
+                "serviceName": "grpc",
+                "authority": "",
+                "mode": false
+              },
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "eh.vk.com",
+                "show": false,
+                "publicKey": "M1a5zeQ6Ckoo1UybbRYD8696xaWb-fRcCY-7iaQ4wCA"
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "🇵🇱 Польша | 6"
+      }
+    },
+    {
+      "name": "🇫🇮 Финляндия | 1",
+      "country": "Финляндия",
+      "number": 1,
+      "source": "main_parser",
+      "config": {
+        "remarks": "🇫🇮 Финляндия | 1",
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "81.19.139.76",
+                  "port": 14768,
+                  "users": [
+                    {
+                      "id": "63acd86a-0386-4bea-8ee4-cb2db7eeb6e5",
+                      "encryption": "none",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "none"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "🇸🇪 Швеция | 1",
+      "country": "Швеция",
+      "number": 1,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "swe.helpbot.click",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "tcpSettings": {},
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "swe.helpbot.click",
+                "show": false,
+                "publicKey": "z3vi_5wvsc8CBnIIswMQepjOmMbD6BdVDnqVF4TUb0U",
+                "shortId": "fd3f0f2bce8083fe"
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "🇸🇪 Швеция | 1"
+      }
+    },
+    {
+      "name": "🇱🇻 Латвия | 1",
+      "country": "Латвия",
+      "number": 1,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "213.21.237.37",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "tcpSettings": {},
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "lvanew.helpbot.click",
+                "show": false,
+                "publicKey": "M1a5zeQ6Ckoo1UybbRYD8696xaWb-fRcCY-7iaQ4wCA",
+                "shortId": "fd3f0f2bce8083fe"
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "🇱🇻 Латвия | 1"
+      }
+    },
+    {
+      "name": "🇫🇷 Франция | 1",
+      "country": "Франция",
+      "number": 1,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "fra03.helpbot.click",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "tcpSettings": {},
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "fra03.helpbot.click",
+                "show": false,
+                "publicKey": "R7KE9NDxjwHNchukd0ZleVeHHtvKAPx4ATJouyKTFVU",
+                "shortId": "75c1756f3fbc4ff9",
+                "fingerprint": "chrome"
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "🇫🇷 Франция | 1"
+      }
+    },
+    {
+      "name": "Белый сервер | 1",
+      "country": "Белый сервер",
+      "number": 1,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "files.helpbot.click",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "xhttp",
+              "xhttpSettings": {
+                "mode": "packet-up",
+                "host": "files.helpbot.click",
+                "path": "/api/uploadFile/",
+                "extra": {
+                  "path": "/api/uploadFile/",
+                  "xmux": {
+                    "cMaxReuseTimes": 1000,
+                    "maxConcurrency": "16-32",
+                    "maxConnections": 0,
+                    "hKeepAlivePeriod": 20000,
+                    "hMaxRequestTimes": "600-900",
+                    "hMaxReusableSecs": "1800-3000"
+                  },
+                  "seqKey": "chunk_id",
+                  "sessionKey": "X-Upload-Token",
+                  "xPaddingKey": "hash",
+                  "seqPlacement": "query",
+                  "xPaddingHeader": "X-Client-Version",
+                  "xPaddingMethod": "tokenish",
+                  "sessionPlacement": "header",
+                  "uplinkHTTPMethod": "GET",
+                  "xPaddingObfsMode": true,
+                  "xPaddingPlacement": "queryInHeader",
+                  "scStreamUpServerSecs": "20-80"
+                }
+              },
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "files.helpbot.click",
+                "allowInsecure": false,
+                "show": false,
+                "fingerprint": "chrome",
+                "alpn": [
+                  "h2",
+                  "http/1.1"
+                ]
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "Белый сервер | 1"
+      }
+    },
+    {
+      "name": "Белый сервер | 2",
+      "country": "Белый сервер",
+      "number": 2,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "dubojahicopi.begetcdn.cloud",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "xhttp",
+              "xhttpSettings": {
+                "mode": "packet-up",
+                "host": "dubojahicopi.begetcdn.cloud",
+                "path": "/api/uploadFile/",
+                "extra": {
+                  "path": "/api/uploadFile/",
+                  "xmux": {
+                    "cMaxReuseTimes": 1000,
+                    "maxConcurrency": "16-32",
+                    "maxConnections": 0,
+                    "hKeepAlivePeriod": 20000,
+                    "hMaxRequestTimes": "600-900",
+                    "hMaxReusableSecs": "1800-3000"
+                  },
+                  "seqKey": "chunk_id",
+                  "sessionKey": "X-Upload-Token",
+                  "xPaddingKey": "hash",
+                  "seqPlacement": "query",
+                  "xPaddingHeader": "X-Client-Version",
+                  "xPaddingMethod": "tokenish",
+                  "sessionPlacement": "header",
+                  "uplinkHTTPMethod": "GET",
+                  "xPaddingObfsMode": true,
+                  "xPaddingPlacement": "queryInHeader",
+                  "scStreamUpServerSecs": "20-80"
+                }
+              },
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "dubojahicopi.begetcdn.cloud",
+                "allowInsecure": false,
+                "show": false,
+                "fingerprint": "chrome",
+                "alpn": [
+                  "h2",
+                  "http/1.1"
+                ]
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "Белый сервер | 2"
+      }
+    },
+    {
+      "name": "Белый сервер | 3",
+      "country": "Белый сервер",
+      "number": 3,
+      "source": "zabanish",
+      "config": {
+        "dns": {
+          "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+          ],
+          "queryStrategy": "UseIP"
+        },
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "protocol": [
+                "bittorrent"
+              ],
+              "outboundTag": "direct"
+            }
+          ],
+          "domainMatcher": "hybrid",
+          "domainStrategy": "IPIfNonMatch"
+        },
+        "inbounds": [
+          {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+              "udp": true,
+              "auth": "noauth"
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          },
+          {
+            "tag": "http",
+            "port": 10809,
+            "listen": "127.0.0.1",
+            "protocol": "http",
+            "settings": {
+              "allowTransparent": false
+            },
+            "sniffing": {
+              "enabled": true,
+              "routeOnly": false,
+              "destOverride": [
+                "http",
+                "tls",
+                "quic"
+              ]
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "tag": "proxy",
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "ananya.helpbot.click",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "33137d3c-fb50-4902-80bf-b0c4107eee5e",
+                      "encryption": "none",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "xhttp",
+              "xhttpSettings": {
+                "mode": "packet-up",
+                "host": "ananya.helpbot.click",
+                "path": "/exchange/",
+                "extra": {
+                  "path": "/exchange/",
+                  "xmux": {
+                    "cMaxReuseTimes": 1000,
+                    "maxConcurrency": "16-32",
+                    "maxConnections": 0,
+                    "hKeepAlivePeriod": 20000,
+                    "hMaxRequestTimes": "600-900",
+                    "hMaxReusableSecs": "1800-3000"
+                  },
+                  "seqKey": "chunk_id",
+                  "sessionKey": "X-Upload-Token",
+                  "xPaddingKey": "hash",
+                  "seqPlacement": "query",
+                  "xPaddingHeader": "X-Client-Version",
+                  "xPaddingMethod": "tokenish",
+                  "sessionPlacement": "header",
+                  "xPaddingObfsMode": true,
+                  "xPaddingPlacement": "queryInHeader",
+                  "scStreamUpServerSecs": "20-80"
+                }
+              },
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "ananya.helpbot.click",
+                "allowInsecure": false,
+                "show": false,
+                "fingerprint": "chrome",
+                "alpn": [
+                  "h2"
+                ]
+              }
+            }
+          },
+          {
+            "tag": "direct",
+            "protocol": "freedom"
+          },
+          {
+            "tag": "block",
+            "protocol": "blackhole"
+          }
+        ],
+        "remarks": "Белый сервер | 3"
+      }
+    }
+  ]
+}
