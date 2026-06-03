@@ -1,0 +1,49 @@
+{
+  "apps": {
+    "profile": {
+      "name": "yoursite.com",
+      "description": "Премиум подписка • Тариф Ultra Speed",
+      "web_page": "https://yoursite.com",
+      "error_message": "The subscription administrator has restricted access. Please contact technical support.",
+      "user_info": "upload=105906176;download=53687091200;total=1099511627776;expire=1739577600",
+      "update_interval": 6
+    }
+  },
+  "log": {
+    "level": "info"
+  },
+  "dns": {
+    "servers": [
+      { "tag": "dns_direct", "address": "1.1.1.1", "detour": "direct" }
+    ]
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "⚡ Germany [Main]",
+      "server": "194.135.24.11",
+      "server_port": 443,
+      "uuid": "99fb05b8-5026-4b82-9694-fb5e08b1a8d0",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "google.com",
+        "utls": { "enabled": true, "fingerprint": "chrome" },
+        "reality": {
+          "enabled": true,
+          "public_key": "7gX_56hG89f_VbN67ghJ78KfgTY67_ghjF789fgHUI4",
+          "short_id": "8f3c7e2b"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      { "outbound": "dns_direct", "port": [53] }
+    ]
+  }
+}
